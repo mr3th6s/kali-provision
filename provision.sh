@@ -62,7 +62,8 @@ git clone https://github.com/PowerShellMafia/PowerSploit /opt/windows/powersploi
 echo -e " ${BLUE}[*]${RESET} ${BOLD}> https://github.com/swisskyrepo/PayloadsAllTheThings \n"
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings /opt/PayloadsAllTheThings 2> /dev/null
 
-
 touch ~/.hushlogin
 
+### Install pyenv
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
