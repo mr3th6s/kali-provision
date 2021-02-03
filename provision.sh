@@ -21,8 +21,8 @@ gzip -d /usr/share/wordlists/rockyou.txt.gz 2> /dev/null
 
 apt update 
 
-echo -e " ${BLUE}[*]${RESET} ${BOLD}Installing git, curl, seclists, gobuster, zsh and tmux \n"
-apt install -y git curl seclists gobuster zsh tmux
+echo -e " ${BLUE}[*]${RESET} ${BOLD}Installing default things \n"
+apt install -y git curl seclists gobuster zsh tmux terminator
 
 echo -e " ${BLUE}[*]${RESET} ${BOLD}https://github.com/robbyrussell/oh-my-zsh with mh \n"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
