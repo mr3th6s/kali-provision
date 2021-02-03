@@ -31,6 +31,3 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 git clone https://github.com/sherlock-project/sherlock.git /opt/osint/sherlock
 cd /opt/osint/sherlock && python3 -m pip install -r requirements.txt && cd -
 
-
-
-
