@@ -18,11 +18,13 @@ else
 fi
 
 gzip -d /usr/share/wordlists/rockyou.txt.gz 2> /dev/null
+echo "deb https://apt.enpass.io/ stable main" > /etc/apt/sources.list.d/enpass.list
+wget -O - https://apt.enpass.io/keys/enpass-linux.key | apt-key add -
 
 apt update 
 
 echo -e " ${BLUE}[*]${RESET} ${BOLD}Installing default things \n"
-apt install -y git curl seclists gobuster zsh tmux terminator
+apt install -y git curl seclists gobuster zsh tmux terminator enpasstermiterter
 
 echo -e " ${BLUE}[*]${RESET} ${BOLD}https://github.com/robbyrussell/oh-my-zsh with mh \n"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -59,3 +61,8 @@ git clone https://github.com/PowerShellMafia/PowerSploit /opt/windows/powersploi
 ##### Just in case of internet apocalypse #####
 echo -e " ${BLUE}[*]${RESET} ${BOLD}> https://github.com/swisskyrepo/PayloadsAllTheThings \n"
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings /opt/PayloadsAllTheThings 2> /dev/null
+
+
+touch ~/.hushlogin
+
+
